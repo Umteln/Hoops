@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Button from './Button';
 import { IoMdClose } from 'react-icons/io';
+import Link from 'next/link';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const Hero = () => {
     return (
@@ -31,17 +33,21 @@ const Hero = () => {
                 </p>
 
                 <div className='flex flex-col w-full gap-3 sm:flex-row mt-6'>
-                    <Button
-                        type='button'
-                        title='Registration'
-                        variant='btn_green'
-                    />
                     <div>
                         <Button
                             type='button'
                             title='Become a Sponsor'
-                            variant='btn_white_text'
+                            variant='btn_green'
                         />
+                    </div>
+                    <div>
+                        <Link
+                            href='/signup'
+                            className='flex items-center cursor-pointer gap-2 underline hover:text-green-50 bold-16 py-4'
+                        >
+                            Team Registration
+                            <FaLongArrowAltRight size={25} />
+                        </Link>
                     </div>
                 </div>
             </div>
